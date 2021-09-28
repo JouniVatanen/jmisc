@@ -1,0 +1,2 @@
+# stools
+Miscellaneous R functions
