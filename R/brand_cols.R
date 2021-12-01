@@ -43,6 +43,7 @@ brand_pal <- function(palette = "main", reverse = FALSE, ...) {
   brand_palettes <- list(
     `main`  = brand_cols("blue", "yellow", "red"),
     `main2`  = brand_cols("purple", "blue", "yellow", "red"),
+    `main_comparison`  = brand_cols("dark blue", "red"),
     `cool`  = brand_cols("dark blue", "blue", "light blue"),
     `hot`   = brand_cols("red", "semi red", "light red"),
     `likert3` = brand_cols("blue", "blue", "yellow", "red", "red"),
@@ -60,7 +61,7 @@ brand_pal <- function(palette = "main", reverse = FALSE, ...) {
 
 #' Color scale constructor for Brand colors
 #'
-#' @param palette Character name of palette in drsimonj_palettes
+#' @param palette Character name of palette in brand_palettes
 #' @param discrete Boolean indicating whether color aesthetic is discrete or not
 #' @param reverse Boolean indicating whether the palette should be reversed
 #' @param ... Additional arguments passed to discrete_scale() or
