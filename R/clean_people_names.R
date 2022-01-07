@@ -17,7 +17,7 @@ clean_people_names <- function(x) {
   # Create people names pattern
   names <- paste(pull(fi_filtered_people_names), collapse = "|")
   remove_pattern <- paste0("\\b(?:", names, ")\\b ?")
-
+names
   # Remove pattern from string
   output <- stri_replace_all_regex(
     x, remove_pattern, "*",

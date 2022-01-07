@@ -6,9 +6,11 @@
 # 4. Check RTOOLS40_HOME points to Rtools ...\Rtools directory at ..\R\etc\x64\Makeconf
 
 # Checkpoint installs packages
-if (!require("checkpoint")) install.packages("checkpoint")
-# use a date few weeks after R.version was released
-checkpoint::checkpoint("2020-10-26", checkpoint_location = Sys.getenv("USERPROFILE"))
+if (!require("checkpoint")) install.packages("checkpoint"); library(checkpoint)
+create_checkpoint(
+  "2020-10-26", checkpoint_location = Sys.getenv("USERPROFILE"),
+  project_dir = "./src")
+use_checkpoint("2020-10-26", checkpoint_location = Sys.getenv("USERPROFILE"))
 
 # Document and install package
 if (!require(devtools)) install.packages("devtools")

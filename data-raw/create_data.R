@@ -1,8 +1,8 @@
 # Load required packages
-if (!require("checkpoint")) install.packages("checkpoint")
+if (!require("checkpoint")) install.packages("checkpoint"); library(checkpoint)
 
 # use a date few weeks after R.version was released
-checkpoint::checkpoint("2020-10-26", checkpoint_location = Sys.getenv("USERPROFILE"))
+use_checkpoint("2020-10-26", checkpoint_location = Sys.getenv("USERPROFILE"))
 
 # Load libraries
 library(dplyr)
@@ -95,17 +95,18 @@ fi_people_names <- vroom::vroom(
 
 # Create people names to remove
 fi_remove_names <- enframe(
-  c(""),
+  c(NA_character_),
   name = NULL, value = "name")
 
 # Create people names to leave
-fi_leave_names <- c("")
+fi_leave_names <- c("En")
 
 # Create filtered people names data
 fi_filtered_people_names <- fi_people_names %>%
   filter(!name %in% fi_leave_names) %>%
   select(name) %>%
   bind_rows(fi_remove_names) %>%
+  filter(!is.na(name)) %>%
   distinct()
 
 # Create remove words data
