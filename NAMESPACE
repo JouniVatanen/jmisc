@@ -2,6 +2,7 @@
 
 export("%>%")
 export(api_essentials)
+export(bound)
 export(brand_cols)
 export(brand_pal)
 export(calc_birth)
