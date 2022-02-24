@@ -1,8 +1,13 @@
-# Load required packages
-if (!require("checkpoint")) install.packages("checkpoint"); library(checkpoint)
+# Make sure required checkpoint is installed
+if(tryCatch(packageVersion("checkpoint") <= '1.0.0', error = function(e) T)) {
+  install.packages("checkpoint")}
 
-# use a date few weeks after R.version was released
-use_checkpoint("2020-10-26", checkpoint_location = Sys.getenv("USERPROFILE"))
+# Checkpoint installs packages
+checkpoint::create_checkpoint(
+  "2022-02-13", checkpoint_location = Sys.getenv("USERPROFILE"),
+  project_dir = "./data-raw")
+checkpoint::use_checkpoint(
+  "2022-02-13", checkpoint_location = Sys.getenv("USERPROFILE"))
 
 # Load libraries
 library(dplyr)

@@ -1,13 +1,12 @@
 Package: stools
-Title: Tools for CX and survey data
-Version: 0.6.22
+Title: Tools for survey data handling
+Version: 0.7.1
 Authors@R: person("Jouni", "Vatanen", email = "jounipvatanen@gmail.com", role = c("aut", "cre"))
-Description: Miscellaneous functions e.g. for CX and survey data. Also API functions for Questback Essentials survey tool and wrappers for DBI::dbWriteTable.
+Description: Miscellaneous functions for survey data handling. API functions for Surveypal survey tool, wrappers for DBI::dbWriteTable, data cleaning, brand colors and plots.
 Depends: R (>= 3.2.0)
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
-LinkingTo: Rcpp
 Imports:
   broom,
   ClustOfVar,
@@ -29,7 +28,6 @@ Imports:
   odbc,
   pROC,
   purrr,
-  Rcpp,
   readxl,
   readr,
   rlang,
@@ -44,4 +42,4 @@ Imports:
   writexl,
   XML,
   xml2
-RoxygenNote: 7.1.1
+RoxygenNote: 7.1.2

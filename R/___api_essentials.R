@@ -10,7 +10,6 @@
 #' @param send_duplicate Is it allowed to send survey to the same respondent.
 #' @param sep Choose separator. Default: ";"
 #' @keywords API survey
-#' @export
 #' @importFrom httr add_headers POST http_status
 #' @importFrom XML xmlNode saveXML
 #' @importFrom glue glue

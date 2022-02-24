@@ -13,7 +13,7 @@ clean_company_names(x)
 Clean string from Finnish company names
 }
 \examples{
-clean_company_names("lklkdf Nokia Oyj lkjadf ef KÃ¤mmekkÃ¤sÃ¤Ã¤tiÃ¶")
+clean_company_names("lklkdf Nokia Oyj lkjadf ef Kämmekkäsäätiö")
 }
 \keyword{clean,}
 \keyword{company,}

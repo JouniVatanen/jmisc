@@ -5,15 +5,19 @@
 # 3. Set ...\Rtools\mingw`$(WIN)\bin to your BINPREF e.g. with Powershell
 # 4. Check RTOOLS40_HOME points to Rtools ...\Rtools directory at ..\R\etc\x64\Makeconf
 
+# Make sure required checkpoint and devtools are installed
+if(tryCatch(
+  packageVersion("checkpoint") <= '1.0.0' | packageVersion("devtools") <= "2.0.0",
+  error = function(e) T)) { install.packages(c("checkpoint", "devtools"))}
+
 # Checkpoint installs packages
-if (!require("checkpoint")) install.packages("checkpoint"); library(checkpoint)
-create_checkpoint(
-  "2020-10-26", checkpoint_location = Sys.getenv("USERPROFILE"),
+checkpoint::create_checkpoint(
+  "2022-02-13", checkpoint_location = Sys.getenv("USERPROFILE"),
   project_dir = "./src")
-use_checkpoint("2020-10-26", checkpoint_location = Sys.getenv("USERPROFILE"))
+checkpoint::use_checkpoint(
+  "2022-02-13", checkpoint_location = Sys.getenv("USERPROFILE"))
 
 # Document and install package
-if (!require(devtools)) install.packages("devtools")
 devtools::document()
 devtools::install(upgrade = FALSE)
 
