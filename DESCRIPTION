@@ -1,6 +1,6 @@
 Package: stools
 Title: Tools for survey data handling
-Version: 0.7.1
+Version: 0.7.2
 Authors@R: person("Jouni", "Vatanen", email = "jounipvatanen@gmail.com", role = c("aut", "cre"))
 Description: Miscellaneous functions for survey data handling. API functions for Surveypal survey tool, wrappers for DBI::dbWriteTable, data cleaning, brand colors and plots.
 Depends: R (>= 3.2.0)
@@ -13,7 +13,6 @@ Imports:
   data.table,
   DBI,
   desctable,
-  digest,
   dplyr,
   factoextra,
   fs,
@@ -21,16 +20,15 @@ Imports:
   glue,
   gridExtra,
   httr,
-  ISLR,
   lubridate,
   magrittr,
   modelr,
   odbc,
   pROC,
   purrr,
-  readxl,
   readr,
   rlang,
+  rstudioapi,
   R.utils,
   stringi,
   tidyr,
@@ -39,7 +37,5 @@ Imports:
   twilio,
   vroom,
   wordcloud,
-  writexl,
-  XML,
   xml2
 RoxygenNote: 7.1.2

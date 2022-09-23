@@ -13,7 +13,7 @@ if(tryCatch(
 # Checkpoint installs packages
 checkpoint::create_checkpoint(
   "2022-02-13", checkpoint_location = Sys.getenv("USERPROFILE"),
-  project_dir = "./src")
+  project_dir = "./R")
 checkpoint::use_checkpoint(
   "2022-02-13", checkpoint_location = Sys.getenv("USERPROFILE"))
 
