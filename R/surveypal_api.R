@@ -136,7 +136,7 @@ sp_send_invites <- function(
   out <- tryCatch({
 
     # Parse datetimes to correct form %Y-%m-%dT%H:%M:%S
-    if (!is.null(send_at)) { sp_parse_datetime(send_at) }
+    if (!is.null(send_at)) { send_at <- sp_parse_datetime(send_at) }
 
     # Send request to Surveypal
     url <- sprintf(
