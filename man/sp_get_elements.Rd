@@ -19,7 +19,7 @@ sp_get_elements(
 
 \item{locale}{Locale. Default: First locale of the survey. Example value: "fi_FI".}
 
-\item{use_questoin_id}{Use question id. Default is FALSE.}
+\item{use_question_id}{Use question id. Default is FALSE.}
 }
 \description{
 Get elements from a single Surveypal survey.

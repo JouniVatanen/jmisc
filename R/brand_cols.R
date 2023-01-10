@@ -123,9 +123,10 @@ brand_pal <- function(palette = "main", reverse = FALSE, ...) {
   brand_palettes <- list(
     `main`  = brand_cols("blue", "yellow", "red"),
     `main2`  = brand_cols("purple", "blue", "yellow", "red"),
-    `main_comparison`  = brand_cols("dark blue", "red", "yellow"),
+    `main_comparison` = brand_cols("dark blue", "red", "yellow"),
     `cool`  = brand_cols("dark blue", "blue", "light blue"),
     `hot`   = brand_cols("red", "semi red", "light red"),
+    `bluered` = brand_cols("blue", "red"),
     `likert3` = brand_cols("blue", "blue", "yellow", "red", "red"),
     `likert5` = brand_cols("blue", "light blue", "yellow", "semi red", "red"),
     `likert5+` = brand_cols("blue", "light blue", "yellow", "semi red", "red", "grey"),

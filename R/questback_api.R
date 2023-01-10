@@ -135,7 +135,7 @@ qb_get_questions <- function(username, password, quest_id, security_id) {
 
     content(res, "parsed", "text/xml", encoding = "UTF-8") %>%
       xml_ns_strip() %>%
-      xml_find_all("//QuestQuestion") %>%
+      xml_find_all("//QuestQuestion")
       {data.table(
         QuestionNumber = xml_text(xml_find_first(., "QuestionNumber")),
         QuestionId = xml_text(xml_find_first(., "QuestionId")),
@@ -204,8 +204,8 @@ qb_get_responses <- function(username, password, quest_id, security_id) {
     if (http_status(res)$reason != "OK") { stop("Failed to get responses.") }
 
     content(res, "parsed", "text/xml", encoding = "UTF-8") %>%
-      xml_ns_strip() %>%
-      xml_find_all("//Answer") %>%
+      xml_ns_strip()
+      xml_find_all("//Answer")
       {data.table(
         RespondentId = xml_text(xml_find_first(., "../../RespondentId")),
         ResponseId = xml_text(xml_find_first(., "../../ResponseId")),

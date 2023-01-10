@@ -168,7 +168,7 @@ sp_send_invites <- function(
 #' @param survey_id Survey id from Surveypal.
 #' @param api_key Api-token from Surveypal.
 #' @param locale Locale. Default: First locale of the survey. Example value: "fi_FI".
-#' @param use_questoin_id Use question id. Default is FALSE.
+#' @param use_question_id Use question id. Default is FALSE.
 #' @keywords surveypal, survey, api
 #' @export
 #' @import httr
